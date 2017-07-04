@@ -1,43 +1,13 @@
 <div class="region region-topbar">
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12"></div>
-        <!-- /.col-xs-12 -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.container-fluid -->
+  <%- partial('_partials/_regions/topbar') %>
 </div>
 <!-- /.region region-topbar -->
 <div class="region region-branding">
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12"></div>
-        <!-- /.col-xs-12 -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.container-fluid -->
+  <%- partial('_partials/_regions/branding') %>
 </div>
 <!-- /.region region-branding -->
 <div class="region region-navigation">
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12"></div>
-        <!-- /.col-xs-12 -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.container-fluid -->
+  <%- partial('_partials/_regions/navigation') %>
 </div>
 <!-- /.region region-navigation -->
 <div class="main-container">
@@ -45,18 +15,20 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-3">
-          <div class="region region-sidebar region-sidebar-first"></div>
+          <div class="region region-sidebar region-">
+            <%- partial('_partials/_regions/sidebar-first') %>
+          </div>
           <!-- /.region region-sidebar region-sidebar-first -->
         </div>
         <!-- /.col-xs-12 col-md-3 -->
         <div class="col-xs-12 col-md-6">
           <div class="highlighted">
             <div class="region region-highlighted">
-
+              <%- partial('_partials/_regions/highlighted') %>
             </div>
             <!-- /.region region-highlighted -->
             <div class="region region-content">
-
+              <%- partial('_partials/_regions/content') %>
             </div>
             <!-- /.region region-content -->
           </div>
@@ -64,7 +36,9 @@
         </div>
         <!-- /.col-xs-12 col-md-6 -->
         <div class="col-xs-12 col-md-3">
-          <div class="region region-sidebar region-sidebar-second"></div>
+          <div class="region region-sidebar region-sidebar-second">
+            <%- partial('_partials/_regions/sidebar-second') %>
+          </div>
           <!-- /.region region-sidebar region-sidebar-second -->
         </div>
         <!-- /.col-xs-12 col-md-3 -->
@@ -77,16 +51,6 @@
 </div>
 <!-- /.main-container -->
 <div class="region region-footer">
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12"></div>
-        <!-- /.col-xs-12 -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.container-fluid -->
+  <%- partial('_partials/_regions/footer') %>
 </div>
 <!-- /.region region-footer -->

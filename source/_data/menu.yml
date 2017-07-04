@@ -1,0 +1,9 @@
+Home:
+  url: /
+Animals:
+  url: /animals
+  child:
+    Neko:
+      url: /neko
+    Inu:
+      url: /inu

@@ -4,6 +4,6 @@ Animals:
   url: /animals
   child:
     Neko:
-      url: /neko
+      url: /animals/neko.html
     Inu:
-      url: /inu
+      url: /animals/inu.html

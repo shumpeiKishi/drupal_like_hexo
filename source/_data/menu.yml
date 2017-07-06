@@ -1,9 +1,16 @@
-Home:
-  url: /
-Animals:
-  url: /animals
+- title: Home
+  path: "/"
+- title: "Animals"
+  path: "/animals"
   child:
-    Neko:
-      url: /animals/neko.html
-    Inu:
-      url: /animals/inu.html
+  - title: "Inu"
+    path: "/animals/inu.html"
+  - title: "Neko"
+    path: "/animals/neko.html"
+- title: "Fish"
+  path: "/fish"
+  child:
+  - title: "Salmon"
+    path: "/fish/salmon.html"
+  - title: "Shark"
+    path: "/fish/shark.html"

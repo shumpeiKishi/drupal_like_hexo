@@ -1,5 +1,52 @@
+<%
+
+  var current_path = '/' + path;
+  var menu = site.data.menu;
+  var menu_trail = get_current_menu_trail();
+
+  function is_current_menu(menu_path) {
+    return (
+      menu_path === current_path ||
+      menu_path + '/index.html' === current_path
+    );
+  }
+
+  // This shoud be enhanced sometime. Only one level child menu is available for now.
+  function get_current_menu_trail() {
+    var menu_trail_temp = [];
+    for (var menu_item of menu) {
+      // Keep current menu item in menu_trail_temp. It will be cleared when the current menu is not found.
+      menu_trail_temp.push(menu_item);
+      // Check if menu_item is the current link.
+      if (is_current_menu(menu_item.path)) {
+        return menu_trail_temp;
+      } else if (menu_item.child) {
+        // Dig child menu if there are child menus
+        for (var child_menu_item of menu_item.child) {
+          if (is_current_menu(child_menu_item.path)) {
+            menu_trail_temp.push(child_menu_item);
+            return menu_trail_temp;
+          }
+        }
+        // If the child menus do not have the current path, empty the menu_trail_temp.
+        menu_trail_temp = [];
+      } else {
+        // If no child menu and menu_item is not current path, empty menu_trail_temp.
+        menu_trail_temp = [];
+      }
+    }
+    // Return false if current path is not in the menu.
+    return false;
+  }
+%>
+
 <ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
-  <li class="active">Data</li>
+  <li><a href="/">Home</a></li>
+  <% for (menu_item of menu_trail) {
+    %>
+    <li><a href="<%= menu_item.path %>"><%= menu_item.title %></a></li>
+    <%
+  } %>
+
+
 </ol>
